@@ -1,0 +1,275 @@
+button:focus {outline:0;}
+.container {
+    margin-top: 50px;
+}
+:root { font-size: 14px }
+    $break-small: 500px;
+    $break-large: 1200px;
+    $font-body: 'Arial', sans-serif;
+    $font-headings: 'Arial', sans-serif;
+    $margin-block: 1rem;
+
+
+// Link styling
+a:link    {
+    /* Applies to all unvisited links */
+    text-decoration:  none;
+    font-weight:      bold;
+    background-color: transparent;
+    color:            inherit;
+    } 
+  a:visited {
+    /* Applies to all visited links */
+    text-decoration:  none;
+    font-weight:      bold;
+    background-color: transparent;
+    color:            inherit;
+    } 
+  a:hover   {
+    /* Applies to links under the pointer */
+    text-decoration:  none;
+    font-weight:      bold;
+    background-color: transparent;
+    // color:            inherit;
+    } 
+  a:active  {
+    /* Applies to activated links */
+    text-decoration:  none;
+    font-weight:      bold;
+    background-color: transparent;
+    color:            inherit;
+    } 
+
+
+// colors
+
+//grays
+    $base-gray: #000000;
+    $dark-gray: lighten($base-gray, 30%);
+    $middle-gray: lighten($base-gray, 40%);
+    $light-gray: lighten($base-gray, 60%);
+
+// brand colors
+
+    $brand-primary: #70B1EC ;
+    $brand-secondary: #FFCB96 ;
+    $brand-success: #3A9500 ;
+
+
+// Input fields
+
+label {
+    position: absolute;
+    top: 0;
+    font-size: var(--font-size-small);
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.2s ease-out;
+}
+input {
+    height: 40px;
+    width: 80%;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 20px;
+
+}
+input:focus {outline:0;}
+
+input:placeholder-shown + label {
+    opacity: 0;
+    transform: translateY(1rem);
+
+}
+
+// body
+
+
+body {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    height: 100%;
+    width: 100%;
+    font-family: $font-body;
+    background-color: #F6F6F6;
+    font-size: 1rem;
+    line-height: 1em;
+    margin-bottom: 10rem;
+    color: #000000;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;    
+}
+
+// Layout
+
+.container {
+    width: 960px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    @media screen and (max-width: $break-small) {
+      width: 100%;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+  }
+
+
+  // Typography
+
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 300;
+    @media screen and (max-width: $break-small) {
+       font-size: 1rem;
+       line-height: 1.2rem;
+      }
+
+}
+p.lighter {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: .8rem;
+    color: $light-gray;
+    font-weight: 300;
+    @media screen and (max-width: $break-small) {
+        font-size: 1rem;
+        line-height: 1.2rem;
+       }
+}
+h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 700;
+    @media screen and (max-width: $break-small) {
+        font-size: 2.5rem;
+        line-height: 2rem;
+
+       }
+}
+h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2.3rem;
+    line-height: 2.3rem;
+    font-weight: 600;
+    @media screen and (max-width: $break-small) {
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+
+       }
+}
+h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 600;
+    @media screen and (max-width: $break-small) {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+
+       }
+}
+h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    font-weight: 600;
+    @media screen and (max-width: $break-small) {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+
+       }
+}
+
+.strong {
+    font-weight: 600;
+}
+
+// margin blocks
+.margin-top-5 { margin-top: $margin-block ; @media screen and (max-width: $break-small) { margin-top:  0.3rem }}
+.margin-top-10 { margin-top: $margin-block ; @media screen and (max-width: $break-small) { margin-top: $margin-block + .5rem }}
+.margin-top-25 { margin-top: $margin-block ; @media screen and (max-width: $break-small) { margin-top: $margin-block + 1rem }}
+.margin-top-50 { margin-top: $margin-block + 1rem ; @media screen and (max-width: $break-small) { margin-top: $margin-block + 1rem }}
+.margin-top-75 { margin-top: $margin-block + 2rem ; @media screen and (max-width: $break-small) { margin-top: $margin-block + 1rem }}
+.margin-top-100 { margin-top: $margin-block + 3rem; @media screen and (max-width: $break-small) { margin-top: $margin-block + 1rem }}
+
+.margin-bottom-5 { margin-bottom: $margin-block ; @media screen and (max-width: $break-small) { margin-bottom: .3rem }}
+.margin-bottom-10 { margin-bottom: $margin-block ; @media screen and (max-width: $break-small) { margin-bottom: $margin-block + .5rem }}
+.margin-bottom-25 { margin-bottom: $margin-block }
+.margin-bottom-50 { margin-bottom: $margin-block + 1rem ; @media screen and (max-width: $break-small) { margin-bottom: $margin-block + 1rem }}
+.margin-bottom-75 { margin-bottom: $margin-block + 2rem ; @media screen and (max-width: $break-small) { margin-bottom: $margin-block + 1rem }}
+.margin-bottom-100 { margin-bottom: $margin-block + 3rem ; @media screen and (max-width: $break-small) { margin-bottom: $margin-block + 1rem }}
+
+
+
+// buttons
+
+.button-primary {
+    background-color: $brand-secondary;
+    min-width: 300px;
+    min-height: 30px;
+    border: none;
+    border-radius: none;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+}
+.button-primary:hover {
+    background-color: lighten($brand-primary, 5%) ;
+    cursor: pointer;
+    
+}
+.button-primary:active {
+    background-color: lighten($brand-primary, 5%) ;
+
+}
+.button-primary:focus {
+    background-color: lighten($brand-primary, 5%) ;
+
+}
+
+.button-outline-light {
+    background-color: transparent;
+    min-width: 100px;
+    min-height: 30px;
+    border: solid 2px white;
+    border-radius: none;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+}
+.button-outline-light:hover {
+    background-color: white;
+    color: $dark-gray;
+    cursor: pointer;
+    
+}
+.button-outline-light:active {
+    background-color: white;
+    color: $dark-gray;
+    cursor: pointer;
+}
+.button-outline-light:focus {
+    background-color: white;
+    color: $dark-gray;
+    cursor: pointer;
+}
