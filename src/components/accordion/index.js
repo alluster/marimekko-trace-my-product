@@ -44,11 +44,10 @@ const AccordionSet = ({open, handleClick}) => (
         </AccordionItem>
         <AccordionItem>
             <AccordionItemTitle>
-                <h3>Complex title</h3>
-                <div>With a bit of description</div>
+                <h3>Raw Materials</h3>
             </AccordionItemTitle>
             <AccordionItemBody>
-                <p>Body content</p>
+                <p>Raw Materials</p>
             </AccordionItemBody>
         </AccordionItem>
     </Accordion>
