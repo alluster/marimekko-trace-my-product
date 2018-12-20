@@ -5,17 +5,19 @@ import CardGrid from '../../components/card-grid/CardGrid';
 import CardButton from '../../components/card-button/CardButton';
 import { connect } from 'react-redux';
 import { fetchProducts } from '../../actions/index';
+import { getUserId } from '../../firebase/auth';
 
 
 class Products extends Component {
  
   componentDidMount() {
     this.props.fetchProducts();
-
+    getUserId()
   }
 
   render() {
-    console.log("products",this.props.products)
+    const getUser =  getUserId()    
+    const userEmail = getUser;
 
     const icon = "fa fa-camera"
     return (
@@ -24,7 +26,7 @@ class Products extends Component {
           <BottomNavigation />
           <div className="container">
           
-              <h2 style={{ textAlign: "center", margin:"10px" }}>Hello User!</h2>
+              <p style={{ textAlign: "center" }} >Welcome</p><h4 style={{ textAlign: "center", margin:"10px" }}>{userEmail}</h4>
               <p style={{ textAlign: "center", margin:"10px" }}>These are your products:</p>
 
              <CardGrid  data={this.props.products} />

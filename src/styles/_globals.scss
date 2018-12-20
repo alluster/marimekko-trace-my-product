@@ -127,8 +127,8 @@ body {
 p {
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 1.5rem;
-    line-height: 1.5;
+    font-size: 1rem;
+    line-height: 1;
     font-weight: 300;
     @media screen and (max-width: $break-small) {
        font-size: 1rem;
@@ -162,12 +162,12 @@ h1 {
 h2 {
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 2.3rem;
-    line-height: 2.3rem;
+    font-size: 2rem;
+    line-height: 2.2rem;
     font-weight: 600;
     @media screen and (max-width: $break-small) {
-        font-size: 1.8rem;
-        line-height: 1.8rem;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
 
        }
 }

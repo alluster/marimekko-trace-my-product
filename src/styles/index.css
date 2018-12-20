@@ -89,8 +89,8 @@ body {
 p {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 1.5rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1;
   font-weight: 300; }
   @media screen and (max-width: 500px) {
     p {
@@ -122,13 +122,13 @@ h1 {
 h2 {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 2.3rem;
-  line-height: 2.3rem;
+  font-size: 2rem;
+  line-height: 2.2rem;
   font-weight: 600; }
   @media screen and (max-width: 500px) {
     h2 {
-      font-size: 1.8rem;
-      line-height: 1.8rem; } }
+      font-size: 1.5rem;
+      line-height: 1.5rem; } }
 
 h3 {
   margin-top: 0;
@@ -466,8 +466,8 @@ body {
 p {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 1.5rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1;
   font-weight: 300; }
   @media screen and (max-width: 500px) {
     p {
@@ -499,13 +499,13 @@ h1 {
 h2 {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 2.3rem;
-  line-height: 2.3rem;
+  font-size: 2rem;
+  line-height: 2.2rem;
   font-weight: 600; }
   @media screen and (max-width: 500px) {
     h2 {
-      font-size: 1.8rem;
-      line-height: 1.8rem; } }
+      font-size: 1.5rem;
+      line-height: 1.5rem; } }
 
 h3 {
   margin-top: 0;
@@ -659,20 +659,17 @@ h4 {
   background-color: white; }
 
 .card-image {
-  position: absolute;
-  max-width: 100%;
+  object-fit: cover;
   width: 100%;
-  height: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 4px; }
+  height: 100%;
+  /* optional, but in my case it was good */ }
 
 .card-image-container {
   position: relative;
-  width: 100px;
+  width: 100%;
   height: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  background-size: cover; }
 
 .card-grid {
   position: relative;
@@ -769,8 +766,8 @@ body {
 p {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 1.5rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1;
   font-weight: 300; }
   @media screen and (max-width: 500px) {
     p {
@@ -802,13 +799,13 @@ h1 {
 h2 {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 2.3rem;
-  line-height: 2.3rem;
+  font-size: 2rem;
+  line-height: 2.2rem;
   font-weight: 600; }
   @media screen and (max-width: 500px) {
     h2 {
-      font-size: 1.8rem;
-      line-height: 1.8rem; } }
+      font-size: 1.5rem;
+      line-height: 1.5rem; } }
 
 h3 {
   margin-top: 0;
@@ -985,6 +982,132 @@ h4 {
   width: 80%;
   border: none; }
 
+.close {
+  margin-left: 20px;
+  margin-top: 20px; }
+
+/**
+* ----------------------------------------------
+* Demo styles
+* ----------------------------------------------
+**/
+.u-position-absolute {
+  position: absolute; }
+
+.u-position-relative {
+  position: relative; }
+
+.accordion {
+  border: none;
+  border-radius: 0px; }
+
+.accordion__item--has-icon {
+  position: relative; }
+
+.accordion__title {
+  background-color: #fff;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  text-align: left;
+  border: none; }
+
+.accordion__title:hover {
+  background-color: #fff; }
+
+.accordion__body {
+  padding: 20px;
+  display: block;
+  animation: fadein 0.35s ease-in; }
+
+.accordion__body--hidden {
+  display: none;
+  opacity: 0;
+  animation: fadein 0.35s ease-in; }
+
+.accordion__title > *:last-child,
+.accordion__body > *:last-child {
+  margin-bottom: 0; }
+
+.accordion__arrow {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 12px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -6px; }
+
+.accordion__arrow::after,
+.accordion__arrow::before {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 2px;
+  background-color: currentColor;
+  content: ''; }
+
+.accordion__arrow::before {
+  left: 4px;
+  transform: rotate(45deg); }
+
+[aria-expanded='true'] .accordion__arrow::before, [aria-selected='true'] .accordion__arrow::before {
+  transform: rotate(-45deg); }
+
+.accordion__arrow::after {
+  right: 4px;
+  transform: rotate(-45deg); }
+
+[aria-expanded='true'] .accordion__arrow::after, [aria-selected='true'] .accordion__arrow::after {
+  transform: rotate(45deg); }
+
+.accordion__arrow::before,
+.accordion__arrow::after {
+  transition: transform 0.25s ease, -webkit-transform 0.25s ease; }
+
+/* -------------------------------------------------- */
+/* ---------------- Animation part ------------------ */
+/* -------------------------------------------------- */
+@keyframes fadein {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes move-down {
+  0% {
+    transform: translateY(0); }
+  10% {
+    transform: translateY(0); }
+  20% {
+    transform: translateY(5px); }
+  30% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes move-up {
+  0% {
+    transform: translateY(0); }
+  10% {
+    transform: translateY(0); }
+  20% {
+    transform: translateY(-5px); }
+  30% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(0); } }
+
+.accordion__title--animated:hover .accordion__arrow {
+  animation-name: move-down;
+  animation-duration: 1.5s; }
+
+.accordion__title--animated[aria-expanded='true']:hover .accordion__arrow {
+  animation-name: move-up;
+  animation-duration: 1.5s; }
+
 .hello-container {
   text-align: center !important; }
 
@@ -1103,8 +1226,8 @@ body {
 p {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 1.5rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1;
   font-weight: 300; }
   @media screen and (max-width: 500px) {
     p {
@@ -1136,13 +1259,13 @@ h1 {
 h2 {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 2.3rem;
-  line-height: 2.3rem;
+  font-size: 2rem;
+  line-height: 2.2rem;
   font-weight: 600; }
   @media screen and (max-width: 500px) {
     h2 {
-      font-size: 1.8rem;
-      line-height: 1.8rem; } }
+      font-size: 1.5rem;
+      line-height: 1.5rem; } }
 
 h3 {
   margin-top: 0;

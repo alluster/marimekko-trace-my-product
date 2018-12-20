@@ -14,14 +14,11 @@ class Splash extends Component {
     componentDidMount() {
       setTimeout(() => {
         this.props.history.push("/products")
-      }, 2000);
+      }, 1000);
     }
       
     
   render() {
-    
-    console.log(this.props)
-
   
     const { heroBody, heroButtonText, heroImage, heroHeader } = this.state
 

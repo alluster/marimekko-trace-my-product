@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { auth } from '../../firebase';
 
-import * as routes from '../../constants/routes';
 
 const SignUp = ({ history }) =>
   <div>
@@ -10,7 +9,7 @@ const SignUp = ({ history }) =>
     <SignUpForm history={history} />
   </div>
 const INITIAL_STATE = {
-  username: '',
+  displayName: '',
   email: '',
   passwordOne: '',
   passwordTwo: '',
@@ -29,15 +28,11 @@ class SignUpForm extends Component {
   }
 
   onSubmit = (event) => {
-    const pushToHistory = () =>  history.push('/products');
     const {
-      username,
       email,
       passwordOne,
     } = this.state;
-    const {
-      history,
-    } = this.props;
+
     auth.doCreateUserWithEmailAndPassword(email, passwordOne)
       .then(() => {
         this.setState(INITIAL_STATE );
@@ -71,7 +66,7 @@ class SignUpForm extends Component {
           value={username}
           onChange={event => this.setState(byPropKey('username', event.target.value))}
           type="text"
-          placeholder="Full Name"
+          placeholder="Username"
         />
         <input
           value={email}

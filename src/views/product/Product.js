@@ -4,7 +4,9 @@ import TopNavigation from '../../components/navigation/TopNavigation'
 import CardButton from '../../components/card-button/CardButton';
 import ProductInfoCard from '../../components/product-info-card/ProductInfoCard';
 import { connect } from 'react-redux';
-import { fetchProduct} from '../../actions/index';
+
+import { fetchProduct } from '../../actions/index';
+
 
 
 class Product extends Component {
@@ -26,6 +28,8 @@ class Product extends Component {
       showDetails: !prevState.showDetails
     }));
   }
+
+  
   render() {
     const buttonText =  !this.state.showDetails ? "View product history" : "Close "
     return (
@@ -49,4 +53,4 @@ class Product extends Component {
 function mapStateToProps(state) {
   return { product: state.product };
 }
-export default connect(mapStateToProps, { fetchProduct })(Product);
+export default connect(mapStateToProps,{ fetchProduct })(Product);

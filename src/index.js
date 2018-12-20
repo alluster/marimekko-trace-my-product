@@ -10,7 +10,6 @@ import reducers from './reducers';
 require('dotenv').config();
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore)
-console.log(process.env.REACT_APP_FIREBASE_API_KEY);
 
 ReactDOM.render((
   

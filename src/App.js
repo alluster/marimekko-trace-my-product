@@ -21,6 +21,7 @@ class App extends Component {
     };
   }
   componentDidMount() {
+    
     firebase.auth.onAuthStateChanged(authUser => {
 
       if(authUser) {
@@ -28,12 +29,13 @@ class App extends Component {
         () => {
           this.props.history.push('/')
         })
-        
+
       }
       else{  
         this.setState({ authUser: null })
       }
     });
+
   }
   
   render() {
