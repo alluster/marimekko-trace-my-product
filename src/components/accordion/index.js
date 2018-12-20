@@ -31,7 +31,7 @@ const AccordionSet = ({open, handleClick}) => (
                     </Col>
                     <Col xs={2} sm={2} md={2} lg={2}>
                     {
-                        open ? <i  className="fa fa-angle-down"></i> : <i  className="fa fa-angle-up"></i>
+                        open ? <i  className="fa fa-angle-down fa-2x"></i> : <i  className="fa fa-angle-up fa-2x"></i>
                     }
                 
                     </Col>
@@ -64,8 +64,8 @@ const AccordionSet = ({open, handleClick}) => (
                         </Col>
                         <Col xs={2} sm={2} md={2} lg={2}>
                         {
-                            open ? <i  className="fa fa-angle-down"></i> : <i  className="fa fa-angle-up"></i>
-                        }
+                        open ? <i  className="fa fa-angle-down fa-2x"></i> : <i  className="fa fa-angle-up fa-2x"></i>
+                    }
                     
                         </Col>
 
@@ -96,8 +96,8 @@ const AccordionSet = ({open, handleClick}) => (
                         </Col>
                         <Col xs={2} sm={2} md={2} lg={2}>
                         {
-                            open ? <i  className="fa fa-angle-down"></i> : <i  className="fa fa-angle-up"></i>
-                        }
+                        open ? <i  className="fa fa-angle-down fa-2x"></i> : <i  className="fa fa-angle-up fa-2x"></i>
+                    }
                     
                         </Col>
 
@@ -127,8 +127,8 @@ const AccordionSet = ({open, handleClick}) => (
                         </Col>
                         <Col xs={2} sm={2} md={2} lg={2}>
                         {
-                            open ? <i  className="fa fa-angle-down"></i> : <i  className="fa fa-angle-up"></i>
-                        }
+                        open ? <i  className="fa fa-angle-down fa-2x"></i> : <i  className="fa fa-angle-up fa-2x"></i>
+                    }
                     
                         </Col>
 
@@ -158,7 +158,7 @@ const AccordionSet = ({open, handleClick}) => (
                     </Col>
                     <Col xs={2} sm={2} md={2} lg={2}>
                     {
-                        open ? <i  className="fa fa-angle-down"></i> : <i  className="fa fa-angle-up"></i>
+                        open ? <i  className="fa fa-angle-down fa-2x"></i> : <i  className="fa fa-angle-up fa-2x"></i>
                     }
                 
                     </Col>
@@ -178,7 +178,7 @@ const AccordionSet = ({open, handleClick}) => (
                     </Col>
                     <Col xs={2} sm={2} md={2} lg={2}>
                     {
-                        open ? <i  className="fa fa-angle-down"></i> : <i  className="fa fa-angle-up"></i>
+                        open ? <i  className="fa fa-angle-down fa-2x"></i> : <i  className="fa fa-angle-up fa-2x"></i>
                     }
                 
                     </Col>
@@ -198,7 +198,7 @@ const AccordionSet = ({open, handleClick}) => (
                     </Col>
                     <Col xs={2} sm={2} md={2} lg={2}>
                     {
-                        open ? <i  className="fa fa-angle-down"></i> : <i  className="fa fa-angle-up"></i>
+                        open ? <i  className="fa fa-angle-down fa-2x"></i> : <i  className="fa fa-angle-up fa-2x"></i>
                     }
                 
                     </Col>
