@@ -1108,6 +1108,28 @@ h4 {
   animation-name: move-up;
   animation-duration: 1.5s; }
 
+.progress-bar {
+  position: relative;
+  height: 400px;
+  width: 50px;
+  background: linear-gradient(to bottom, #CA386A 99.9%, transparent 99.9%), radial-gradient(circle at 50% 50%, #CA386A 25%, transparent 30%);
+  background-position: 50% 0%, 50% 64px;
+  /* 15px is 30% of 50px */
+  background-size: 5px 100%, 30px 100px;
+  /* 5px is the thickness of the bar, 50px is 1/8th of the height */
+  background-repeat: no-repeat, repeat-y; }
+
+.progress-now {
+  position: absolute;
+  width: 50px;
+  height: 1000px;
+  background: linear-gradient(to bottom, #CA386A 99.9%, transparent 99.9%), radial-gradient(circle at 50% 50%, #CA386A 25%, transparent 30%);
+  background-position: 50% 0%, 50% 64px;
+  /* 15px is 30% of 50px */
+  background-size: 5px 100%, 30px 100px;
+  /* 5px is the thickness of the bar, 50px is 1/8th of the height */
+  background-repeat: no-repeat, repeat-y; }
+
 .hello-container {
   text-align: center !important; }
 

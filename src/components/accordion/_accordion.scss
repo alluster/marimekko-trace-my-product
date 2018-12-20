@@ -156,3 +156,47 @@
     animation-name: move-up;
     animation-duration: 1.5s;
 }
+
+
+
+/// line with dots 
+
+$bar-background-color: #CA386A;
+$bar-color: #CA386A;
+
+$height: 400px;
+$width: 50px;
+$bar-thickness: 5px;
+$circle-radius: 30px;
+
+$steps: 4;
+$progress: 10;
+
+@mixin progress-bar($color) {
+  background:
+    linear-gradient(to bottom, $color 99.9%, transparent 99.9%),
+    radial-gradient(circle at 50% 50%, $color 25%, transparent 30%);
+  background-position:
+    50% 0%,
+    50% 64px; /* 15px is 30% of 50px */
+  background-size:
+    $bar-thickness 100%,
+    $circle-radius ($height / $steps); /* 5px is the thickness of the bar, 50px is 1/8th of the height */
+  background-repeat:
+    no-repeat,
+    repeat-y;
+} 
+
+.progress-bar {
+  position: relative;
+  height: $height;
+  width: $width;
+  @include progress-bar($bar-background-color);
+}
+
+.progress-now {
+  position: absolute;
+  width: $width;
+  height: $height * ($progress / $steps); // progress
+  @include progress-bar($bar-color);
+}
