@@ -54,11 +54,11 @@ class SignUpForm extends Component {
       passwordTwo,
       error,
     } = this.state;
-    const isInvalid =
-    passwordOne !== passwordTwo ||
-    passwordOne === '' ||
-    email === '' ||
-    username === '';
+    // const isInvalid =
+    // passwordOne !== passwordTwo ||
+    // passwordOne === '' ||
+    // email === '' ||
+    // username === '';
 
     return (
       <form onSubmit={this.onSubmit}>
@@ -88,7 +88,7 @@ class SignUpForm extends Component {
         />
                 { error && <p>{error.message}</p> }
 
-        <button className="product-info-button" disabled={isInvalid} type="submit" onClick={this.onSubmit}>
+        <button className="product-info-button"  type="submit" onClick={this.onSubmit}>
           <h3>Register</h3>
         </button>
           

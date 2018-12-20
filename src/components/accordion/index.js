@@ -39,6 +39,24 @@ const AccordionSet = ({open, handleClick}) => (
                 </Row>
             </AccordionItemTitle>
             <AccordionItemBody>
+                   <Accordion>
+        <AccordionItem>
+            <AccordionItemTitle>
+                <Row  onClick={handleClick}>
+                    <Col xs={10} sm={10} md={10} lg={10}>
+                    <h3>Timeline</h3>
+
+                    </Col>
+                    <Col xs={2} sm={2} md={2} lg={2}>
+                    {
+                        open ? <i  className="fa fa-angle-down"></i> : <i  className="fa fa-angle-up"></i>
+                    }
+                
+                    </Col>
+
+                </Row>
+            </AccordionItemTitle>
+            <AccordionItemBody>
                 <Timeline />
             </AccordionItemBody>
         </AccordionItem>
@@ -50,6 +68,10 @@ const AccordionSet = ({open, handleClick}) => (
                 <p>Raw Materials</p>
             </AccordionItemBody>
         </AccordionItem>
+    </Accordion>
+            </AccordionItemBody>
+        </AccordionItem>
+       
     </Accordion>
 );
 export default enhance(AccordionSet);
