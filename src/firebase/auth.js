@@ -21,5 +21,6 @@ export const doPasswordUpdate = (password) =>
 auth.currentUser.updatePassword(password);
 
 export const getUserId = () => {
+  if(auth.currentUser){
 return auth.currentUser.email;
-}
+}}

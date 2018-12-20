@@ -41,10 +41,23 @@ const AccordionSet = ({open, handleClick}) => (
             <AccordionItemBody>
                    <Accordion>
         <AccordionItem>
+            <Row>
+            <Col xs={2} sm={2} md={2} lg={2}>
+                hello
+            </Col>           
+            <Col xs={10} sm={10} md={10} lg={10}> 
+            <div className="card">
             <AccordionItemTitle>
                 <Row  onClick={handleClick}>
                     <Col xs={10} sm={10} md={10} lg={10}>
-                    <h3>Timeline</h3>
+                    <h3>1.2.2017</h3>
+                    <div>
+                        <p>International Cotton Ltd. 
+                            Cotton collected and cleaned
+                            Location: Hangzou, China 
+                        </p>
+                        <p style={{ textDecoration: "underline", color: "blue" }}>View on map</p>
+                    </div>
 
                     </Col>
                     <Col xs={2} sm={2} md={2} lg={2}>
@@ -56,9 +69,13 @@ const AccordionSet = ({open, handleClick}) => (
 
                 </Row>
             </AccordionItemTitle>
-            <AccordionItemBody>
+            <AccordionItemBody >
                 <Timeline />
             </AccordionItemBody>
+            </div>
+            </Col>
+            </Row>
+
         </AccordionItem>
         <AccordionItem>
             <AccordionItemTitle>
