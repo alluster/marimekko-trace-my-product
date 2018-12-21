@@ -14,7 +14,7 @@ class Splash extends Component {
     componentDidMount() {
       setTimeout(() => {
         this.props.history.push("/products")
-      }, 1000);
+      }, 2000);
     }
       
     

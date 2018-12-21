@@ -54,7 +54,7 @@ class App extends Component {
             <Route exact path='/account' component={Account}/>
 
             <Route exact path='/pw-forget' component={PasswordForgetPage}/>
-            <Route exact path='/products' component={Products}/>
+            <PrivateRoute exact path='/products' component={Products}/>
             <Route exact path='/signin' component={SignInPage } authUser={this.state.authUser}/>
 
             <Route exact path='/products/:slug' component={Product}/>

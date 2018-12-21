@@ -10,9 +10,11 @@ class CardButton extends Component {
   }
   
 render() { 
+    const link = this.props.link ? this.props.link : "/product";
 
       return (
-      <Link to="/product">
+          
+      <Link to={link}>
           <div className="button-card margin-bottom-50">
               <Row >
                   <Col center="xs" className="icon-container" xs={3} sm={3} md={3} lg={3}>

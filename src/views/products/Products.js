@@ -30,7 +30,7 @@ class Products extends Component {
               <p style={{ textAlign: "center", margin:"10px" }}>These are your products:</p>
 
              <CardGrid  data={this.props.products} />
-             <CardButton icon={icon} cardText="Add a new product"/>
+             <CardButton link="/products" icon={icon} cardText="Add a new product"/>
 
           </div>
 
