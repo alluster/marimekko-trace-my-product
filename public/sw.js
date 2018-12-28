@@ -1,6 +1,7 @@
 var cacheName = 'hello-world-page';
 var filesToCache = [
-  'README.md'
+  'README.md',
+  '/index.html'
 ];
 self.addEventListener('install', function(e) {
   console.log('[ServiceWorker] Install');
