@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import SignIn from '../../components/sign-in/SignIn'
 import SignUp from '../../components/sign-in/SignUp'
 
+import didYouKnow from './didYouKnow.png'
 
 import TopNavigation from '../../components/navigation/TopNavigation'
 import BottomNavigation from '../../components/navigation/BottomNavigation'
@@ -13,14 +14,20 @@ class SignInPage extends Component {
         this.state = {
           register: false,
           signIn: true,
-          showInstallMessage: false
+          showInstallMessage: false,
         }
         this.onClick = this.onClick.bind(this)
+        this.skip = this.skip.bind(this)
 
       }
       onClick() {
         this.setState(prevState => ({
           register: !prevState.register
+        }));
+      }
+      skip() {
+        this.setState(prevState => ({
+          showInstallMessage: !prevState.showInstallMessage
         }));
       }
       componentDidMount() {
@@ -39,7 +46,11 @@ class SignInPage extends Component {
  render() {
     const buttonText =  this.state.register ? "Sign in" : "Register"
     const text =  this.state.register ? "Have an Account already?" : "Don't have an account yet?"
-    const installMessage = this.state.showInstallMessage ? "This application can be downloaded as a PWA" : null;
+    const installMessage = <div>
+    <h3>We noticed that you haven't downloaded this app. You can do it from your menu!</h3>
+    <img src={didYouKnow} alt="You can also download this app" />
+    <button onClick={this.skip}>Skip this time</button>
+  </div>
 
 
 const Register = () =>
@@ -50,7 +61,9 @@ const Login = () =>
 
 
     return (
-      <div >    
+      <div >
+        {
+          this.state.showInstallMessage ? <div>
           <TopNavigation />
             <BottomNavigation />
             <div className="container">
@@ -59,11 +72,17 @@ const Login = () =>
                     <p className="margin-top-25">{text}</p>
                     
                     <h3 onClick={this.onClick}>{buttonText}</h3>
-                    {installMessage}
+                   
 
                 </div>
            
             </div>
+            </div> :
+              <div className="sign-in-page-container">
+              {installMessage}            
+            </div>
+            
+        }   
      
 
 
