@@ -415,7 +415,7 @@
       "sizes": "16x16"
     }
   ],
-  "start_url": "/index.html",
+  "start_url": "https://trace-my-product.herokuapp.com/index.html",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
