@@ -13,7 +13,7 @@ class SignInPage extends Component {
         this.state = {
           register: false,
           signIn: true,
-          showInstallMessage: true
+          showInstallMessage: false
         }
         this.onClick = this.onClick.bind(this)
 
@@ -39,7 +39,7 @@ class SignInPage extends Component {
  render() {
     const buttonText =  this.state.register ? "Sign in" : "Register"
     const text =  this.state.register ? "Have an Account already?" : "Don't have an account yet?"
-    const installMessage = this.state.showInstallMessage ? "Hey there you can install this app" : null;
+    const installMessage = this.state.showInstallMessage ? "This application can be downloaded as a PWA" : null;
 
 
 const Register = () =>
@@ -52,7 +52,6 @@ const Login = () =>
     return (
       <div >    
           <TopNavigation />
-          {installMessage}
             <BottomNavigation />
             <div className="container">
                 <div className="sign-in-page-container">
@@ -60,6 +59,8 @@ const Login = () =>
                     <p className="margin-top-25">{text}</p>
                     
                     <h3 onClick={this.onClick}>{buttonText}</h3>
+                    {installMessage}
+
                 </div>
            
             </div>
