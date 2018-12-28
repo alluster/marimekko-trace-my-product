@@ -14,7 +14,7 @@ class SignInPage extends Component {
         this.state = {
           register: false,
           signIn: true,
-          showInstallMessage: false,
+          showInstallMessage: true,
         }
         this.onClick = this.onClick.bind(this)
         this.skip = this.skip.bind(this)
