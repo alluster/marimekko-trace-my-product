@@ -14,7 +14,7 @@ class SignInPage extends Component {
         this.state = {
           register: false,
           signIn: true,
-          showInstallMessage: true,
+          showInstallMessage: false,
         }
         this.onClick = this.onClick.bind(this)
         this.skip = this.skip.bind(this)
@@ -63,7 +63,7 @@ const Login = () =>
     return (
       <div >
         {
-          this.state.showInstallMessage ? <div>
+          !this.state.showInstallMessage ? <div>
           <TopNavigation />
             <BottomNavigation />
             <div className="container">
