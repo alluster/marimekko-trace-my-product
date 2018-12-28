@@ -13,6 +13,7 @@ class SignInPage extends Component {
         this.state = {
           register: false,
           signIn: true,
+          showInstallMessage: true
         }
         this.onClick = this.onClick.bind(this)
 
@@ -22,10 +23,23 @@ class SignInPage extends Component {
           register: !prevState.register
         }));
       }
+      componentDidMount() {
+        const isIos = () => {
+          const userAgent = window.navigator.userAgent.toLowerCase();
+          return /iphone|ipad|ipod/.test( userAgent );
+        }
+        // Detects if device is in standalone mode
+        const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+        
+        // Checks if should display install popup notification:
+        if (isIos() && !isInStandaloneMode()) {
+          this.setState({ showInstallMessage: true });
+        }
+      }
  render() {
     const buttonText =  this.state.register ? "Sign in" : "Register"
     const text =  this.state.register ? "Have an Account already?" : "Don't have an account yet?"
-
+    const installMessage = this.state.showInstallMessage ? "Hey there you can install this app" : null;
 
 
 const Register = () =>
@@ -38,6 +52,7 @@ const Login = () =>
     return (
       <div >    
           <TopNavigation />
+          {installMessage}
             <BottomNavigation />
             <div className="container">
                 <div className="sign-in-page-container">
