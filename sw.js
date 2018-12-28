@@ -1,6 +1,6 @@
 var cacheName = 'hello-world-page';
 var filesToCache = [
-  '%PUBLIC_URL%/favicon.ico'
+  'README.md'
 ];
 self.addEventListener('install', function(e) {
   console.log('[ServiceWorker] Install');
