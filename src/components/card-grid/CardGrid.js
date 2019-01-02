@@ -7,20 +7,25 @@ class CardGrid extends Component {
     
     super(props);
     this.state = {
+      data: []
     }
+
   }
-  renderProducts() {
-    return this.props.data.map((card, index) => 
-    <Col key={index} xs={12} sm={6} md={4} lg={4}><Card data={card} /></Col>
-  )
+  componentDidMount(){
+    this.setState({
+      data: this.props.data
+    })
   }
+  
   render() {
   
   console.log(this.props.data)
     return (
       <div>
             <Row>
-               {this.renderProducts()}
+              { this.state.data.map((card, index) => 
+                <Col key={index} xs={12} sm={6} md={4} lg={4}><Card data={card} /></Col>
+              )}
             </Row>
             </div>
     )
