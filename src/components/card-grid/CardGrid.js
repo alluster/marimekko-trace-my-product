@@ -11,7 +11,7 @@ class CardGrid extends Component {
   }
     
   render() {
-    const data =  this.props.data ? this.props.data : null;
+    const data =  this.props.data ? this.props.data : {};
     const cards = data.map((card, index) =>
     <Col key={index} xs={12} sm={6} md={4} lg={4}><Card data={card} /></Col>
   );
