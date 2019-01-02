@@ -9,20 +9,18 @@ class CardGrid extends Component {
     this.state = {
     }
   }
-    
-  render() {
-    const data =  this.props.data ? this.props.data : {};
-    const cards = data.map((card, index) =>
+  renderProducts() {
+    return this.props.data.map((card, index) => 
     <Col key={index} xs={12} sm={6} md={4} lg={4}><Card data={card} /></Col>
-  );
-
+  )
+  }
+  render() {
+  
+  console.log(this.props.data)
     return (
       <div>
             <Row>
-              
-            
-            {cards}
-
+               {this.renderProducts()}
             </Row>
             </div>
     )
