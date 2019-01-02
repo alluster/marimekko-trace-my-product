@@ -2,10 +2,14 @@ import React, { Component } from 'react';
 import BottomNavigation from '../../components/navigation/BottomNavigation'
 import TopNavigation from '../../components/navigation/TopNavigation'
 import CardButton from '../../components/card-button/CardButton';
+import AddProduct from '../../components/card-button-add-product/AddProduct';
+
+
 import ProductInfoCard from '../../components/product-info-card/ProductInfoCard';
 import { connect } from 'react-redux';
 
 import { fetchProduct } from '../../actions/index';
+import { myProducts } from '../../firebase/database';
 
 
 
@@ -14,22 +18,31 @@ class Product extends Component {
     
     super(props);
     this.state = {
-      showDetails: false
+      showDetails: false,
+      added: false,
     }
-    this.onClick = this.onClick.bind(this)
+    this.handleClick = this.handleClick.bind(this)
+    this.addToMyProducts = this.addToMyProducts.bind(this)
 
   }
   componentDidMount() {
-    this.props.fetchProduct(this.props.match.params.slug);
+    this.props.fetchProduct(this.props.match.params.productId);
   }
 
-  onClick() {
+  handleClick() {
     this.setState(prevState => ({
       showDetails: !prevState.showDetails
     }));
   }
-
-  
+  addToMyProducts() {
+    myProducts(this.props.match.params.productId)
+    // this.setState(prevState => ({
+    //   added: !prevState.added
+    // }))
+  }
+  // removeFromMyProducts() {
+  //   removeFromMyProducts(this.props.match.params.productId)
+  // }
   render() {
     const buttonText =  !this.state.showDetails ? "View product history" : "Close "
     return (
@@ -41,10 +54,13 @@ class Product extends Component {
 
           </div>
           <div className="container product-container">
-          
-            <ProductInfoCard onClick={this.onClick} buttonText={buttonText} showDetails={this.state.showDetails} data={this.props.product}/>
-            <CardButton  icon="fa fa-plus" cardText="Add to my products"/>
+         
+            <ProductInfoCard onClick={this.handleClick} buttonText={buttonText} showDetails={this.state.showDetails} data={this.props.product}/>
           </div>
+          <AddProduct 
+          // onClick={this.addToMyProducts} 
+          icon="fa fa-plus" cardText={this.state.added ? "Add to my products" : "Added to your products"}/>
+
 
       </div>
     )

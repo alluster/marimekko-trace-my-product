@@ -14,13 +14,13 @@ export const doSignOut = () =>
   
 // Password Reset
 export const doPasswordReset = (email) =>
-auth.sendPasswordResetEmail(email);
+  auth.sendPasswordResetEmail(email);
 
 // Password Change
 export const doPasswordUpdate = (password) =>
-auth.currentUser.updatePassword(password);
+  auth.currentUser.updatePassword(password);
 
 export const getUserId = () => {
   if(auth.currentUser){
-return auth.currentUser.email;
+  return auth.currentUser.email;
 }}

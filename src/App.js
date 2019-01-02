@@ -57,7 +57,7 @@ class App extends Component {
             <PrivateRoute exact path='/products' component={Products}/>
             <Route exact path='/signin' component={SignInPage } authUser={this.state.authUser}/>
 
-            <Route exact path='/products/:slug' component={Product}/>
+            <Route exact path='/products/:productId' component={Product}/>
 
 
     

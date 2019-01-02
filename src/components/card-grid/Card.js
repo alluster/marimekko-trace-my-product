@@ -12,7 +12,7 @@ class Card extends Component {
   
 render() { 
       return (
-      <Link to={ `/products/${this.props.data.fields.slug}` }>
+      <Link to={ `/products/${this.props.data.fields.productId}` }>
           <div className="card margin-bottom-50">
               <Row>
                   <Col xs={4} sm={4} md={4} lg={4}>

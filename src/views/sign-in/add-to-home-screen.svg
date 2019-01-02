@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="74px" height="94px" viewBox="0 0 74 94" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" transform="translate(-1.000000, 0.000000)">
+            <text id="Add-to-Home-Screen" font-family="Montserrat-Light, Montserrat" font-size="11" font-weight="300" letter-spacing="0.0700000003" fill="#686872">
+                <tspan x="19.607" y="79">Add to </tspan>
+                <tspan x="0.412999998" y="93">Home Screen</tspan>
+            </text>
+            <rect id="App-Icon" fill="#FFFFFF" x="8" y="0" width="60" height="60" rx="13.5"></rect>
+            <rect id="App-Icon" fill="#686872" x="21" y="14" width="33" height="33" rx="6"></rect>
+            <text id="+" font-family="Montserrat-Medium, Montserrat" font-size="35" font-weight="400" letter-spacing="0.729166687" fill="#FFFFFF">
+                <tspan x="26.9504167" y="43">+</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
