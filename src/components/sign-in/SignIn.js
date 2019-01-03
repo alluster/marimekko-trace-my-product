@@ -15,45 +15,46 @@ const SignIn = ({ history }) =>
 
   </div>
 
-const byPropKey = (propertyName, value) => () => ({
-  [propertyName]: value,
-});
-
 const INITIAL_STATE = {
   email: '',
   password: '',
   error: null,
 };
+const byPropKey = (propertyName, value) => () => ({
+  [propertyName]: value,
+});
+
 
 class SignInForm extends Component {
   constructor(props) {
     super(props);
-
-    this.state = INITIAL_STATE ;
+    this.state = 
+      INITIAL_STATE
   }
 
-  onSubmit = (event) => {
+  onSubmit = event => {
+    this.props.history.push('/products')
+
+
     const {
       email,
       password,
     } = this.state;
 
-    const {
-      history,
-    } = this.props;
-
     auth.doSignInWithEmailAndPassword(email, password)
-      .then(() => {
-        this.setState( INITIAL_STATE );
-        history.push('/products');
-      })
-      .catch(error => {
-        this.setState(byPropKey('error', error));
-      });
+
+      // .then((INITIAL_STATE) => {
+      //   this.setState( ...INITIAL_STATE );
+      // })
+      // .catch(error => {
+      //   this.setState(byPropKey('error', error));
+        
+      // });
 
     event.preventDefault();
-  }
+    // pushToHistory();
 
+  }
   render() {
     const {
       email,
@@ -61,9 +62,7 @@ class SignInForm extends Component {
       error,
     } = this.state;
 
-    const isInvalid =
-      password === '' ||
-      email === '';
+ 
 
     return (
       <form onSubmit={this.onSubmit}>
@@ -80,7 +79,7 @@ class SignInForm extends Component {
           placeholder="Password"
         />
       
-        <button className="product-info-button" disabled={isInvalid} type="submit">
+        <button className="product-info-button" type="submit" >
           <h3>Sign In</h3>
         </button>
 

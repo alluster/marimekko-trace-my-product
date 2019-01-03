@@ -6,7 +6,6 @@ import SignUp from '../../components/sign-in/SignUp'
 import actionIcon from './action-icon.svg'
 import logo from './logo.png'
 
-
 import TopNavigation from '../../components/navigation/TopNavigation'
 import BottomNavigation from '../../components/navigation/BottomNavigation'
 

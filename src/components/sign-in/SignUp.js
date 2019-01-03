@@ -24,7 +24,6 @@ class SignUpForm extends Component {
     super(props);
     this.state = 
       INITIAL_STATE
-    
   }
 
   onSubmit = (event) => {
@@ -54,11 +53,6 @@ class SignUpForm extends Component {
       passwordTwo,
       error,
     } = this.state;
-    // const isInvalid =
-    // passwordOne !== passwordTwo ||
-    // passwordOne === '' ||
-    // email === '' ||
-    // username === '';
 
     return (
       <form onSubmit={this.onSubmit}>
@@ -86,9 +80,9 @@ class SignUpForm extends Component {
           type="password"
           placeholder="Confirm Password"
         />
-                { error && <p>{error.message}</p> }
+          { error && <p>{error.message}</p> }
 
-        <button className="product-info-button"  type="submit" onClick={this.onSubmit}>
+        <button className="product-info-button" type="submit" >
           <h3>Register</h3>
         </button>
           
