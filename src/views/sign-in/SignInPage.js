@@ -47,14 +47,16 @@ class SignInPage extends Component {
  render() {
     const buttonText =  this.state.register ? "Sign in" : "Register"
     const text =  this.state.register ? "Have an Account already?" : "Don't have an account yet?"
-    const installMessage = <div>
-    <img className="logo-image" src={logo} alt="You can also download this app" />
-    <h3>Please download this app!</h3>
-    <p>Press the "Add to Home Screen" button in your browser menu</p>
-   <div> <img className="action-icon" src={actionIcon} alt="Action Icon" /></div>
-
-    {/* <button onClick={this.skip}>Skip this time</button> */}
-  </div>
+    const installMessage = 
+    <div>
+      <img className="logo-image" src={logo} alt="You can also download this app" />
+      <h3>Please download this app!</h3>
+      <p>Press the "Add to Home Screen" button in your browser menu</p>
+      <div>   
+        <img className="action-icon" src={actionIcon} alt="Action Icon" />
+      </div>
+      <button className="margin-top-100" onClick={this.skip}>Skip</button>
+    </div>
 
 
 const Register = () =>

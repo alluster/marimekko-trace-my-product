@@ -16,8 +16,7 @@ import { Row, Col } from 'react-flexbox-grid';
                          </Col>
                      </Row>
                  </div>
-                 </div>
-     
-          )
+                 </div> 
+        )
 }
 export default AddProduct;
