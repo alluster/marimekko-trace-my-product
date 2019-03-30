@@ -1,6 +1,6 @@
 # Trace My Product
 
-Application created for company named Marimekko to create transparency around garments manufactured globally. By creating a blockchain for a product we can add traceable data related to a specific product.
+A mobile-first PWA application created to create transparency around garments manufactured globally. By creating a blockchain for a product we can add traceable data related to a specific product.
 
 ### js
 Made with React and Redux
@@ -16,13 +16,13 @@ from where imported to the
 >src/styles/index.scss
 
 ### Authentication
-Auth built on Firebase API 
+Auth built as a Firebase project 
 
 ### Content 
-Current app uses http://contentful.io CMS for changing content and all the content on the app is "fake" and relates to no user data what so ever
+Current app uses http://contentful.io CMS for changing content and all the content on the app is "fake" and relates to no actual user data displayed.
 
 ### Deployment
-The app is curently hosted on http://surge.sh service (no CI build)
+The app is curently hosted on Heroku with github CI
 
 ### Usage
 
