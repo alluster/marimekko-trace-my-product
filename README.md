@@ -26,6 +26,8 @@ The app is curently hosted on Heroku with github CI
 
 ### Usage
 
+Create .env file to the root of the project and add Firebase & Contentful variables accordingly. 
+
 //npm install
 //npm run start
 //npm run build
